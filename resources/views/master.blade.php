@@ -26,6 +26,23 @@
     .search-box{
         width: 500px;
     }
+    .img-container{
+    width: 300px;
+    height: 220px;
+    overflow: hidden;
+    }
+    .trending-img{
+        width: 100%;
+        height: auto;
+    }
+    .cart-list-devider{
+        border-bottom: 1px solid #ccc;
+        -webkit-box-shadow: 10px 10px 16px -4px rgba(0,0,0,0.51);
+        -moz-box-shadow: 10px 10px 16px -4px rgba(0,0,0,0.51);
+        box-shadow: 10px 10px 16px -4px rgba(0,0,0,0.51);
+        margin-bottom: 20px;
+
+    }
     </style>
 </head>
 <body class="d-flex flex-column h-100">
