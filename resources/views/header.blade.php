@@ -14,7 +14,7 @@ $totle= ProductController::cartItem();
                     <a class="nav-link active" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Orders</a>
+                    <a class="nav-link" aria-current="page" href="/myorders">Orders</a>
                 </li>
                 </ul>
                 <ul class="navbar-nav col-6 justify-content-end">
@@ -42,6 +42,7 @@ $totle= ProductController::cartItem();
                 </a>
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="/login">Login</a>
+                    <a class="dropdown-item" href="/register">Register</a>
                 </div>
                     @endif
                 </li>

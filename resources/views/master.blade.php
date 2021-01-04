@@ -43,6 +43,9 @@
         margin-bottom: 20px;
 
     }
+    .searched-item{
+        background-color: rgb(216, 216, 216);
+    }
     </style>
 </head>
 <body class="d-flex flex-column h-100">
