@@ -18,6 +18,7 @@
                         </label>
                     </div>
                     <button class="w-100 btn btn-lg btn-primary" type="submit">Login</button>
+                    <a href="/register">Register!</a>
                 </form>
             </div>
         </div>

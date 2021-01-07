@@ -18,14 +18,14 @@ $totle= ProductController::cartItem();
                 </li>
                 </ul>
                 <ul class="navbar-nav col-6 justify-content-end">
-                <li class="nav-item">
+                <li class="nav-item pr-2">
                     <form action="/search" class="d-flex">
                         <input class="form-control search-box me-2" name="query" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </li>
-                <li class="nav-item pr-0">
-                    <a class="nav-link" aria-current="Cart" href="/cartlist">Cart({{$totle}})</a>
+                <li class="nav-item">
+                    <a class="cart-status nav-link btn" aria-current="Cart"><a class="fa fa-shopping-bag" href="/cartlist" style="color:green;" data-toggle="tooltip" data-placement="bottom" title="Cart!" aria-hidden="true"></a><span class="badge-cart badge badge-secondary">{{$totle}}</span></a>
                 </li>
                 <!-- Dropdown -->
                 <li class="nav-item dropdown">
@@ -50,3 +50,4 @@ $totle= ProductController::cartItem();
         </div>
     </div>
 </nav>
+

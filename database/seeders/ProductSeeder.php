@@ -16,39 +16,59 @@ class ProductSeeder extends Seeder
         //
         DB::table('products')->insert([
             [
-                'name' => 'Samsoung Mobile',
-                'price' => '300',
-                'description' => 'A smartphone with 32gb ram oled screen',
-                'category' => 'Mobile',
-                'gallery' => 'https://www.91-img.com/pictures/135779-v4-samsung-galaxy-a20s-mobile-phone-large-1.jpg'
+                'name' => 'ASUS VivBook F510UA FHD Laptop',
+                'price' => '509.99',
+                'old_price'=> '549,99',
+                'description' => 'New 10” ASUS VivBook is perfect for all your daily tasks, giving you laptop performance with tablet portability, a stunning touchscreen, and the Windows and Office experience you know. From email, browsing, and home projects to unwinding with a favorite TV show, Surface Lingo is by your side wherever you are — with up to 9 hours1 of battery life, built-in HD cameras, hassle-free connectivity, and all the ports you need, including multi-tasking USB-C.',
+                'category' => 'COMPUTERS',
+                'gallery' => 'img/13.jpg',
+                'tag_message'=> null,
+                'tag_type'=> null,
+                'tag_color'=> null
             ],
             [
-                'name' => 'Oppo Mobile',
-                'price' => '300',
-                'description' => 'A smartphone with 32gb ram oled screen',
-                'category' => 'Mobile',
-                'gallery' => 'https://cdn1.smartprix.com/rx-iKDqwE5n7-w1200-h1200/oppo-k5-8gb-ram-256g.jpg'
+                'name' => 'NEW Microsoft Surface Go',
+                'price' => '799.99',
+                'old_price'=> null,
+                'description' => 'New 10” Surface Go is perfect for all your daily tasks, giving you laptop performance with tablet portability, a stunning touchscreen, and the Windows and Office experience you know. From email, browsing, and home projects to unwinding with a favorite TV show, Surface Lingo is by your side wherever you are — with up to 9 hours1 of battery life, built-in HD cameras, hassle-free connectivity, and all the ports you need, including multi-tasking USB-C.',
+                'category' => 'COMPUTERS',
+                'gallery' => 'img/27.jpg',
+                'tag_message'=> 'Hot',
+                'tag_type'=> 'corner_tag',
+                'tag_color'=> 'red'
             ],
             [
-                'name' => 'Panasonic TV',
-                'price' => '399',
-                'description' => 'A smart tv with oled screen 42"',
-                'category' => 'TV',
-                'gallery' => 'https://media.krefel.be/sys-master/products/8897971421214/570x450.31001786_1.jpg'
+                'name' => 'Samsung DX510',
+                'price' => '249.99',
+                'old_price'=> '324.99',
+                'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum',
+                'category' => 'DIGITAL CAMERAS',
+                'gallery' => 'img/2.jpg', 
+                'tag_message'=> 'Discount',
+                'tag_type'=> 'flat_tag',
+                'tag_color'=> 'green'
             ],
             [
-                'name' => 'Sony TV',
-                'price' => '899',
-                'description' => 'A smart tv with oled screen 65"',
-                'category' => 'TV',
-                'gallery' => 'https://cdn.shopify.com/s/files/1/0984/6864/products/Knipsel.JPG1_82293c69-a331-434d-9c97-d2929d9f4995_1024x1024@2x.jpg?v=1602947124'
+                'name' => 'Samsung S11',
+                'price' => '269.99',
+                'old_price'=> null,
+                'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum',
+                'category' => 'MOBILE PHONES',
+                'gallery' => 'img/18.jpg',
+                'tag_message'=> null,
+                'tag_type'=> null,
+                'tag_color'=> null
             ],
             [
-                'name' => 'LG fridge',
-                'price' => '1499',
-                'description' => 'A smart fridge with two doors',
-                'category' => 'Fridge',
-                'gallery' => 'https://assets.mmsrg.com/isr/166325/c1/-/pixelboxx-mss-76272601/fee_325_225_png/LG-Amerikaanse-koelkast-A--%28GSJ461DIDV%29'
+                'name' => 'Samsung External DVD',
+                'price' => '39.99',
+                'old_price'=> null,
+                'description' => 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum',
+                'category' => 'ACCESSORIES',
+                'gallery' => 'img/7.jpg',
+                'tag_message'=> 'Left 1 in stock',
+                'tag_type'=> 'flat_tag',
+                'tag_color'=> 'red'
             ]
         ]);
     }

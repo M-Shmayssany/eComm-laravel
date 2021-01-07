@@ -17,9 +17,13 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('price');
+            $table->string('old_price');
             $table->string('category');
             $table->string('description');
             $table->string('gallery');
+            $table->string('tag_message');
+            $table->string('tag_type');
+            $table->string('tag_color');
             $table->timestamps(); 
         });
     }
