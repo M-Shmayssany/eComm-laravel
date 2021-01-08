@@ -7,6 +7,7 @@ use App\Models\Product;
 use App\Models\Cart;
 use App\Models\Order;
 use App\Models\Category;
+use App\Models\Wish;
 use Illuminate\Support\Facades\DB;
 use Session;
 
@@ -15,11 +16,19 @@ class ProductController extends Controller
 
     function index()
     {
+        if (Session::has('user')) {
+            $userId = Session::get('user')['id'];
+            $wishes = Wish::where('user_id', '=', $userId)->get();
+        }else{
+            $wishes = [];
+        }
         $data = Product::all();
         $cat = Category::all();
+
         return view( 'product', [
             'products' => $data,
-            'categories'=> $cat
+            'categories'=> $cat,
+            'wishes'=> $wishes
             ]);
     }
 
@@ -128,6 +137,22 @@ class ProductController extends Controller
         ->get();
 
         return view('myorders', ['orders' => $orders]);
+        }
+        else
+        {
+            return redirect('/login');
+        }
+    }
+
+    function addToWishlist(Request $req)
+    {
+        if ($req->session()->has('user'))
+        {
+        $wish = new Wish;
+        $wish->user_id=$req->session()->get('user')['id'];
+        $wish->product_id=$req->product_id;
+        $wish->save();
+        return redirect('/');
         }
         else
         {

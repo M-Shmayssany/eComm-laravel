@@ -137,11 +137,32 @@
                 @elseif($item['tag_type'] == 'flat_tag')
                 <div class="badge badge-pill"  style="background-color: {{$item['tag_color']}};">{{$item['tag_message']}}</div>
                 @endif
-                <button class="wishlist active" title="Added to wishlist"><i class="fa fa-heart" style="color: red;"></i></button>
+                <i hidden="true">{{$count=0}}</i>
+                <form action="/add_to_wishlist" method="POST">
+                    @csrf
+                    @foreach ($wishes as $wish)
+                        @if ($item['id'] == $wish['product_id'])
+                        <i hidden="true">{{$count++}}</i>
+                        @endif
+                        @endforeach
+                    <input type="hidden" name="product_id" value={{$item['id']}}>
+                    <button class="wishlist active" title="Added to wishlist"><i class="fa fa-heart" style="color:
+                        
+                        @if ($count >= 1)
+                            red;
+                        @else
+                            gray;
+                        @endif
+                        
+                      "></i></button>
+                </form>
                 <a href="detail.html"><img src="{{$item['gallery']}}" alt="Apple 15.4&quot; MacBook Pro Laptop Space Gray" class="card-img-top"></a>
                 <div class="card-body">
                     <span class="price">€ {{$item['price']}}</span>
-                    <a href="detail.html" class="card-title h6">{{$item['name']}}</a>
+                    @if($item['old_price'] != '')
+                    <span class="price-old">€ {{$item['old_price']}}</span>
+                    @endif
+                    <a href="detail/{{$item['id']}}" class="card-title h6">{{$item['name']}}</a>
                     <div class="d-flex justify-content-between align-items-center">
                         <span class="rating" data-value="4"><i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
@@ -149,7 +170,11 @@
                             <i class="fa fa-star-o"></i>
                             <i class="fa fa-star-o"></i>
                         </span>
-                        <a href="detail/{{$item['id']}}" type="button" class="btn btn-outline-info btn-sm">More Details</a>
+                        <form action="/add_to_cart" method="POST">
+                            @csrf
+                            <input type="hidden" name="product_id" value={{$item['id']}}>
+                            <button class="btn btn-outline-info btn-sm">Add to Cart</button>
+                        </form>
                     </div>
                 </div>
             </div>
